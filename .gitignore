@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+Frontend/node_modules/
+Backend/node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+venv/
+.venv/
+
+# Java
+target/
+*.class
+
+# IDE
+.idea/
+.vscode/

@@ -1,0 +1,396 @@
+.sculptures-page {
+      --ink: #17110c;
+      --ink-soft: #241b13;
+
+      --maroon: #5a1a1f;
+      --maroon-deep: #450f14;
+
+      --gold: #b8892b;
+      --gold-bright: #d9b45f;
+      --gold-pale: #e8d9b0;
+
+      --parchment: #efe6d3;
+      --parchment-dim: #e3d6b8;
+    }
+.sculptures-page * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+.sculptures-page {
+      background: var(--ink);
+      color: var(--parchment);
+      font-family: "Spectral", serif;
+    }
+.sculptures-page a {
+      color: inherit;
+      text-decoration: none;
+    }
+.sculptures-page /* ================= HEADER ================= */
+
+    header {
+      background: var(--ink);
+      border-bottom: 1px solid rgba(216, 180, 95, 0.25);
+
+      padding: 22px 7%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+.sculptures-page .logo {
+      font-family: "Cinzel", serif;
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--gold-pale);
+    }
+.sculptures-page nav {
+      display: flex;
+      gap: 35px;
+    }
+.sculptures-page nav a {
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      color: var(--parchment-dim);
+
+      transition: 0.3s;
+    }
+.sculptures-page nav a:hover,
+.sculptures-page nav a.active {
+      color: var(--gold-bright);
+    }
+.sculptures-page /* ================= PAGE HERO ================= */
+
+    .page-hero {
+      min-height: 430px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 80px 20px;
+
+      background:
+        linear-gradient(
+          rgba(23, 17, 12, 0.82),
+          rgba(69, 15, 20, 0.88)
+        ),
+        url("images/sculptures-banner.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+.sculptures-page .page-hero-content {
+      max-width: 800px;
+    }
+.sculptures-page .eyebrow {
+      color: var(--gold-bright);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+.sculptures-page .page-hero h1 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 500;
+      color: var(--gold-pale);
+      margin-bottom: 22px;
+    }
+.sculptures-page .page-hero p {
+      max-width: 650px;
+      margin: auto;
+
+      font-size: 18px;
+      line-height: 1.8;
+
+      color: var(--parchment-dim);
+    }
+.sculptures-page /* ================= COLLECTION ================= */
+
+    .collection {
+      padding: 90px 7%;
+      background: var(--ink-soft);
+    }
+.sculptures-page .section-heading {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+.sculptures-page .section-heading h2 {
+      font-family: "Cinzel", serif;
+      font-size: 36px;
+      color: var(--gold-pale);
+      font-weight: 500;
+    }
+.sculptures-page .section-heading p {
+      margin-top: 12px;
+      color: var(--parchment-dim);
+    }
+.sculptures-page /* ================= FILTER ================= */
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+.sculptures-page .filter-btn {
+      background: transparent;
+
+      border: 1px solid rgba(216, 180, 95, 0.4);
+
+      color: var(--parchment-dim);
+
+      padding: 11px 22px;
+
+      font-family: "Spectral", serif;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+.sculptures-page .filter-btn:hover,
+.sculptures-page .filter-btn.active {
+      background: var(--maroon);
+      border-color: var(--gold);
+      color: var(--gold-pale);
+    }
+.sculptures-page /* ================= PRODUCTS ================= */
+
+    .products-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 32px;
+    }
+.sculptures-page .product-card {
+      background: var(--ink);
+
+      border: 1px solid rgba(216, 180, 95, 0.18);
+
+      transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+
+      overflow: hidden;
+    }
+.sculptures-page .product-card:hover {
+      transform: translateY(-8px);
+
+      border-color:
+        rgba(216, 180, 95, 0.65);
+    }
+.sculptures-page .product-image {
+      height: 390px;
+
+      overflow: hidden;
+
+      background: #100c08;
+    }
+.sculptures-page .product-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.5s ease;
+    }
+.sculptures-page .product-card:hover .product-image img {
+      transform: scale(1.04);
+    }
+.sculptures-page .product-info {
+      padding: 26px;
+    }
+.sculptures-page .product-category {
+      color: var(--gold);
+      font-size: 11px;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+.sculptures-page .product-info h3 {
+      font-family: "Cinzel", serif;
+
+      color: var(--gold-pale);
+
+      font-size: 21px;
+
+      margin: 10px 0;
+    }
+.sculptures-page .product-info p {
+      color: var(--parchment-dim);
+
+      line-height: 1.7;
+
+      font-size: 15px;
+
+      margin-bottom: 18px;
+    }
+.sculptures-page .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding-top: 15px;
+
+      border-top:
+        1px solid rgba(216, 180, 95, 0.15);
+    }
+.sculptures-page .price {
+      color: var(--gold-bright);
+
+      font-family: "Cinzel", serif;
+
+      font-size: 17px;
+    }
+.sculptures-page .view-btn {
+      border: 1px solid var(--gold);
+
+      padding: 9px 16px;
+
+      color: var(--gold-pale);
+
+      font-size: 12px;
+
+      letter-spacing: 1px;
+
+      transition: 0.3s;
+    }
+.sculptures-page .view-btn:hover {
+      background: var(--gold);
+      color: var(--ink);
+    }
+.sculptures-page /* ================= CTA ================= */
+
+    .cta {
+      padding: 100px 20px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          rgba(69, 15, 20, 0.92),
+          rgba(69, 15, 20, 0.92)
+        );
+    }
+.sculptures-page .cta h2 {
+      font-family: "Cinzel", serif;
+
+      color: var(--gold-pale);
+
+      font-size: 38px;
+
+      margin-bottom: 18px;
+    }
+.sculptures-page .cta p {
+      color: var(--parchment-dim);
+
+      max-width: 600px;
+
+      margin: 0 auto 30px;
+
+      line-height: 1.8;
+    }
+.sculptures-page .cta-btn {
+      display: inline-block;
+
+      padding: 14px 28px;
+
+      border: 1px solid var(--gold);
+
+      color: var(--gold-pale);
+
+      letter-spacing: 1.5px;
+
+      transition: 0.3s;
+    }
+.sculptures-page .cta-btn:hover {
+      background: var(--gold);
+      color: var(--ink);
+    }
+.sculptures-page /* ================= FOOTER ================= */
+
+    footer {
+      background: #100c08;
+
+      padding: 35px 7%;
+
+      text-align: center;
+
+      border-top:
+        1px solid rgba(216, 180, 95, 0.15);
+    }
+.sculptures-page footer p {
+      color: var(--parchment-dim);
+      font-size: 13px;
+    }
+/* ================= RESPONSIVE ================= */
+
+    @media (max-width: 900px) {
+
+      .sculptures-page .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sculptures-page nav {
+        gap: 18px;
+      }
+
+    }
+@media (max-width: 600px) {
+.sculptures-page header {
+        flex-direction: column;
+        gap: 18px;
+      }
+.sculptures-page nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+.sculptures-page .products-grid {
+        grid-template-columns: 1fr;
+      }
+.sculptures-page .product-image {
+        height: 350px;
+      }
+.sculptures-page .page-hero {
+        min-height: 380px;
+      }
+
+
+    
+}
+
+
+  
+/* Keep this page's header styles separate from the homepage. */
+.sculptures-page .sculptures-header {
+  background: var(--ink);
+}
+.sculptures-page .sculptures-header nav {
+  display: flex;
+  gap: 35px;
+}
+.sculptures-page .filters button {
+  font-size: 14px;
+}
+.sculptures-page .cta {
+  background: linear-gradient(rgba(69, 15, 20, 0.92), rgba(69, 15, 20, 0.92));
+}
+.sculptures-page .product-image img {
+  display: block;
+}
+@media (max-width: 600px) {
+  .sculptures-page .sculptures-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+}

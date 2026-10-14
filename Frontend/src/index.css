@@ -1,0 +1,4 @@
+/* Global reset; page-specific styling lives in App.css */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
